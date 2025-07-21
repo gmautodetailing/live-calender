@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GM Auto Detailing Booking</title>
+  <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body class="bg-[#e5e1d8] font-sans text-gray-800 p-8">
+  <div class="max-w-xl mx-auto bg-white p-6 rounded-xl shadow">
+    <img src="/static/logo.png" alt="Logo" class="h-16 mx-auto mb-4">
+    <h1 class="text-2xl font-bold text-center mb-4">Book Your Detailing Service</h1>
+    <form method="POST">
+      <label class="block mb-2 font-medium">Full Name</label>
+      <input type="text" name="name" required class="w-full mb-4 p-2 border rounded">
+
+      <label class="block mb-2 font-medium">Phone Number</label>
+      <input type="tel" name="phone" required class="w-full mb-4 p-2 border rounded">
+
+      <label class="block mb-2 font-medium">Postcode</label>
+      <input type="text" name="postcode" required class="w-full mb-4 p-2 border rounded">
+
+      <label class="block mb-2 font-medium">Service</label>
+      <select name="service" required class="w-full mb-6 p-2 border rounded">
+        <option value="">Select Service</option>
+        <option value="exterior">Exterior Detail</option>
+        <option value="full">Full Detail</option>
+        <option value="standard">Standard Membership</option>
+        <option value="premium">Premium Membership</option>
+      </select>
+
+      <button type="submit" class="bg-black text-white w-full py-2 rounded">Continue</button>
+    </form>
+  </div>
+</body>
+</html>

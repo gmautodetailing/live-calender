@@ -1,0 +1,27 @@
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+input, select, button {
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="tel"],
+select {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+button {
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Date & Time</title>
+  <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body class="bg-[#e5e1d8] font-sans text-gray-800 p-8">
+  <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow">
+    <img src="/static/logo.png" alt="Logo" class="h-16 mx-auto mb-4">
+    <h1 class="text-2xl font-bold text-center mb-4">Select a Time Slot</h1>
+    <form method="POST" action="/book">
+      <input type="hidden" name="name" value="{{ name }}">
+      <input type="hidden" name="phone" value="{{ phone }}">
+      <input type="hidden" name="postcode" value="{{ postcode }}">
+      <input type="hidden" name="service" value="{{ service }}">
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {% for slot in slots %}
+        <label class="block border p-3 rounded cursor-pointer hover:bg-gray-100">
+          <input type="radio" name="date" value="{{ slot.date }}" hidden>
+          <input type="radio" name="time" value="{{ slot.time }}" hidden>
+          <strong>{{ slot.date }}</strong><br>{{ slot.time }}
+        </label>
+        {% endfor %}
+      </div>
+
+      <button type="submit" class="mt-6 bg-black text-white w-full py-2 rounded">Confirm Booking</button>
+    </form>
+  </div>
+</body>
+</html>
