@@ -1,6 +1,6 @@
 
 from flask import Flask, render_template, request, redirect, url_for
-from utils.slot_manager.py import get_available_slots, save_booking
+from utils.slot_manager import get_available_slots, save_booking
 import os
 import sqlite3
 
