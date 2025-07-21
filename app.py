@@ -1,9 +1,6 @@
 
 from flask import Flask, render_template, request, redirect, url_for
-import sys
-sys.path.insert(0, './utils')
-
-from slot_manager import get_available_slots, save_booking
+from utils.slot_manager import get_available_slots, save_booking
 import os
 import sqlite3
 
